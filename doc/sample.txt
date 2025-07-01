@@ -1,0 +1,81 @@
+DANISH SHAIKH 
+Phone: 9321602175 | Email: danish89761@gmail.com | LinkedIn: https://www.linkedin.com/in/danish-shaikh-b6442a212/ 
+ 
+ 
+ 
+SKILLS 
+Data Analysis: Excel, NumPy, Pandas, Matplotlib, Power BI 
+Programming Languages: Python, C/C++, Java, JavaScript 
+Databases: SQL, MySQL 
+Web Development: HTML/CSS, React, Tailwind CSS, 
+JavaScript 
+Other Technologies: Git/GitHub, Operating Systems, 
+Computer Networks, DBMS 
+Mathematics: Statistics, Probability, Linear Algebra 
+ 
+ 
+ 
+EXPERIENCE 
+Tech Intern – Apollo Hospitals 
+June 27, 2024 – August 24, 2024 
+• Assisted in collecting and organizing data from various 
+departments, ensuring accurate entry into internal records 
+using Excel. 
+• Performed basic data entry and maintained spreadsheets, 
+contributing to the accessibility of data records. 
+• Observed data flow across teams within the organization, 
+gaining insights into data management processes. 
+• Enhanced communication skills by coordinating with teams for 
+data collection and validation tasks. 
+ 
+ 
+Key Projects and Technical Contributions 
+Sales Data Analysis and Visualization (Ongoing) 
+Tech Stack: Python, Pandas, NumPy, Matplotlib, Excel 
+• Developing and monitoring data pipelines using 
+Python (Pandas). 
+• Validating data for accuracy and identifying 
+discrepancies in large datasets. 
+• Utilizing intermediate to advanced Excel skills for 
+data analysis and visualization. 
+• Creating charts to analyse sales trends and 
+performance, demonstrating knowledge of 
+financial market concepts. 
+Alkemy Event Website 
+Tech Stack: React, JavaScript, Tailwind CSS 
+• Contributed to the development of a centralized 
+platform for our college's biggest fest, providing 
+event information, registrations, rules, and details. 
+• Collaborated effectively within a team, contributing 
+to 
+development 
+tasks 
+and 
+participating 
+in 
+requirements analysis and testing, demonstrating 
+strong communication and teamwork skills. 
+Leadership and Team management 
+Experience 
+Head of Operations, Google Developer Group (GDG) 
+• Lead and coordinate a team to organize events and 
+workshops. 
+• Manage student participation data and maintain 
+accurate records. 
+• Foster collaboration and clear communication within 
+the team. 
+• Streamline operations to enhance student 
+engagement and experience. 
+Vice President, Coder's Club 
+Aug 2023 – Sep/2024 
+• Co-founded the Coder's Club and established a 
+vibrant tech community. 
+• Organized multiple hackathons, promoting 
+collaboration and innovation. 
+• Developed strong communication skills through 
+...
+and GenAI - by Krish Naik (Udemy) 
+• NumPy, SciPy, Matplotlib & Pandas A-Z: Machine 
+Learning 
+
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
