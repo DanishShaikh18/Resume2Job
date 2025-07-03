@@ -6,7 +6,7 @@ import magic
 from processing.cleaner import clean_text
 
 
-file_path = r'doc\Danish-Shaikh-Customer-Support-Cactus.pdf'
+file_path = r'doc\Final_Danish_Resume.docx'
 
 def f_type(path):
     mime = magic.Magic(mime=True)
@@ -37,8 +37,12 @@ def extract_from_docx(path):
             row_data = [cell.text.strip() for cell in row.cells if cell.text.strip()]
             if row_data:
                 tables.append(row_data)
-    
-    return [text, tables]
+    if text and not tables:
+        return text
+    elif tables and not text:
+        return tables
+    else:
+        return [text,tables]
 
 reader = easyocr.Reader(['en'])
 #Extract text from Image
