@@ -1,5 +1,6 @@
 # cleaner.py
 import re
+from processing.sectioner import create_section
 
 
 headings = ['profile summary','skills','experience','professional experience','projects','courses','certifications','education','leadership experience',]
@@ -34,7 +35,12 @@ def clean_text(text):
             cleaned_lines.append(line)
 
     cleaned_text = "\n".join(cleaned_lines)
+    print("Below is Cleaned text ")
     print(cleaned_text)
+    print()
+
+    create_section(cleaned_text)
+
 
 
 
