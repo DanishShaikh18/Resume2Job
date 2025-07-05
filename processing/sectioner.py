@@ -1,7 +1,8 @@
+from processing.chunking import create_chunks
 #sectioner.py
 def create_section(cleaned_text):
     sections = {}
-    current_key = ""
+    current_key = "contact"
 
     for line in cleaned_text.splitlines():
 
@@ -13,11 +14,15 @@ def create_section(cleaned_text):
         if (line.istitle() or line.isupper()) and len(words) < 3:
             current_key = line.strip().lower()
             sections[current_key] = ""
-        elif current_key:
+        else:
+            if current_key not in sections:
+                sections[current_key] = ""
             sections[current_key] += line.strip() +" "
-    print()
-    print("Below is Sections")
-    print(sections)
+    # print()
+    # print("Below is Sections")
+    # print(sections)
+
+    create_chunks(sections)
 
 
 

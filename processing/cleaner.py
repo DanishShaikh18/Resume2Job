@@ -15,7 +15,7 @@ def clean_text(text):
 
     cleaned_lines = []
 
-    text = re.sub(r"[–—:|=]+", ":", text)  # unify separators like =, |, –, — to colon
+    text = re.sub(r"[–—:|=]+", ":", text)
 
     for line in text.splitlines():
         line = re.sub(r"[•●▪■]", "-", line)
@@ -35,9 +35,9 @@ def clean_text(text):
             cleaned_lines.append(line)
 
     cleaned_text = "\n".join(cleaned_lines)
-    print("Below is Cleaned text ")
-    print(cleaned_text)
-    print()
+    # print("Below is Cleaned text ")
+    # print(cleaned_text)
+    # print()
 
     create_section(cleaned_text)
 
