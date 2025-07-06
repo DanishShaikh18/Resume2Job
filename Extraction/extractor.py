@@ -6,7 +6,7 @@ import magic
 from processing.cleaner import clean_text
 
 
-file_path = r'doc\Danish-Shaikh-DataAnalyst.pdf'
+file_path = r'data\resumes\Danish-Shaikh-DataAnalyst.pdf'
 
 def f_type(path):
     mime = magic.Magic(mime=True)

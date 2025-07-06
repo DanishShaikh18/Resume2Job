@@ -1,4 +1,4 @@
-from processing.chunking import create_chunks
+from processing.chunker import create_chunks
 #sectioner.py
 def create_section(cleaned_text):
     sections = {}

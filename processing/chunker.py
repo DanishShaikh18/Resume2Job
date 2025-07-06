@@ -1,4 +1,5 @@
 import re
+#from matching.vector_store import vector
 
 def find_name(contact_text):
     ignore_patterns = [
@@ -99,6 +100,8 @@ def create_chunks(sample_data):
     for c in chunks:
         print(c)
         print()
+    
+
 
 
 
