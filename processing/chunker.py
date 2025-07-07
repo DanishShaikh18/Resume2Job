@@ -1,5 +1,5 @@
 import re
-#from matching.vector_store import vector
+from matching.vector_store import embed_chunks
 
 def find_name(contact_text):
     ignore_patterns = [
@@ -21,7 +21,7 @@ def map_section(section, section_map):
     return section  # default to original if no match
 
 
-def create_chunks(sample_data):
+def create_chunks(sample_data,session_id):
     chunks = []
     resume_owner = find_name(sample_data.get("contact", "unknown_contact"))
 
@@ -96,10 +96,8 @@ def create_chunks(sample_data):
                     "resume_owner": resume_owner
                 })
 
-    # Debug Print
-    for c in chunks:
-        print(c)
-        print()
+    embed_chunks(chunks,session_id,"resume")
+    
     
 
 

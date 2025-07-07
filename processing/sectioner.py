@@ -1,6 +1,6 @@
 from processing.chunker import create_chunks
 #sectioner.py
-def create_section(cleaned_text):
+def create_section(cleaned_text,session_id):
     sections = {}
     current_key = "contact"
 
@@ -22,7 +22,7 @@ def create_section(cleaned_text):
     # print("Below is Sections")
     # print(sections)
 
-    create_chunks(sections)
+    create_chunks(sections,session_id)
 
 
 

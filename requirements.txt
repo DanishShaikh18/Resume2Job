@@ -1,3 +1,11 @@
+flask
+flask-cors
+tqdm
+numpy
+faiss-cpu
+sentence-transformers
 python-docx
-pypdf
-easyocr
+PyMuPDF
+pillow
+python-magic
+google-generativeai

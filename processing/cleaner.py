@@ -9,7 +9,8 @@ def is_likely_heading(line):
     words = line.strip().lower().split()
     return len(words)<=3 and any(h in line.lower() for h in headings )
 
-def clean_text(text):
+
+def clean_text(text,session_id):
     print("Received text in cleaner.py:")
     
 
@@ -39,7 +40,7 @@ def clean_text(text):
     # print(cleaned_text)
     # print()
 
-    create_section(cleaned_text)
+    create_section(cleaned_text,session_id)
 
 
 

@@ -2,8 +2,8 @@ import os
 import pickle
 import numpy as np 
 import faiss
-from tqdm import tqdm
 from sentence_transformers import SentenceTransformer
+from tqdm import tqdm
 
 # ========== ⚙️ Config ==========
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
@@ -36,6 +36,7 @@ def save_faiss_index(index, metadata, index_path: str, metadata_path: str):
 def embed_chunks(chunks: list, session_id: str, chunk_type: str):
     """
     chunk_type: either 'resume' or 'jd'
+    session_id: uniquely identifies a user/session
     """
     # Create folder for the session
     folder = os.path.join("vector_dbs", session_id)
@@ -50,28 +51,21 @@ def embed_chunks(chunks: list, session_id: str, chunk_type: str):
 
     # Embed and store
     for chunk in tqdm(chunks, desc=f"Embedding {chunk_type} chunks"):
-        text = chunk.get("chunk_text", "").strip()
+        if isinstance(chunk, dict):
+            text = chunk.get("chunk_text", "").strip()
+        elif isinstance(chunk, str):
+            text = chunk.strip()
+            chunk = {"chunk_text": text, "section": "unknown"}
+        else:
+            continue
+
         if not text:
             continue
+
         vector = get_embedding(text)
         index.add(np.array([vector], dtype=np.float32))
         metadata.append(chunk)
 
+
     save_faiss_index(index, metadata, index_path, metadata_path)
     print(f"✅ Stored {len(metadata)} {chunk_type} chunks for session {session_id}.")
-
-# ========== 🧪 Test Run ==========
-if __name__ == "__main__":
-    resume_chunks = [
-        {"chunk_text": "danish shaikh 9321602175 : email : danish89761@gmail.com", "section": "contact", "resume_owner": "danish_shaikh"},
-        {"chunk_text": "built an affiliate-based gaming accessories platform", "section": "projects", "resume_owner": "danish_shaikh"},
-    ]
-
-    jd_chunks = [
-        {"chunk_text": "we are hiring a data analyst with experience in SQL, Power BI, and ML", "section": "job_description"}
-    ]
-
-    session_id = "session_danish_shaikh_123"
-
-    embed_chunks(resume_chunks, session_id=session_id, chunk_type="resume")
-    embed_chunks(jd_chunks, session_id=session_id, chunk_type="jd")

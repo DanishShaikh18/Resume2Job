@@ -1,20 +1,18 @@
-import pdfplumber
+# extractor.py
+
 import fitz
 from docx import Document
-import easyocr
+from PIL import Image
 import magic
+import google.generativeai as genai
 from processing.cleaner import clean_text
 
-
-file_path = r'data\resumes\Danish-Shaikh-DataAnalyst.pdf'
-
+# ========== 🔍 Detect File Type ==========
 def f_type(path):
     mime = magic.Magic(mime=True)
     return mime.from_file(path)
 
-file_type = f_type(file_path)
-
-# Extract text from PDF
+# ========== 📄 PDF Extraction ==========
 def extract_from_pdf(path):
     doc = fitz.open(path)
     text = ""
@@ -22,11 +20,10 @@ def extract_from_pdf(path):
         text += page.get_text()
     return text
 
-
-#Extract text from DOCX
+# ========== 📄 DOCX Extraction ==========
 def extract_from_docx(path):
     doc = Document(path)
-    
+
     text = "\n".join(
         para.text.strip() for para in doc.paragraphs if para.text.strip()
     )
@@ -37,21 +34,31 @@ def extract_from_docx(path):
             row_data = [cell.text.strip() for cell in row.cells if cell.text.strip()]
             if row_data:
                 tables.append(row_data)
+
     if text and not tables:
         return text
     elif tables and not text:
-        return tables
+        return str(tables)
     else:
-        return [text,tables]
+        return text + "\n\n" + str(tables)
 
-reader = easyocr.Reader(['en'])
-#Extract text from Image
+# ========== 🖼️ Image Extraction ==========
 def extract_from_image(path):
-    results = reader.readtext(path)
-    lines = [text for _, text, conf in results if conf > 0.5]
-    return "\n".join(lines)
+    genai.configure(api_key="AIzaSyCt4_tCNLtp6R6d5F_NvvBZIJC31dpOJhY")
 
-if __name__ == '__main__':
+    img = Image.open(path)
+
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    response = model.generate_content([
+        img,
+        "Extract all text from this image and return in plain text only"
+    ])
+
+    return response.text
+
+# ========== 🚀 Main Function for Resume Chunking ==========
+def extract_resume_chunks(file_path, session_id):
+    file_type = f_type(file_path)
 
     if file_type == 'application/pdf':
         extracted_text = extract_from_pdf(file_path)
@@ -60,13 +67,7 @@ if __name__ == '__main__':
     elif file_type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
         extracted_text = extract_from_docx(file_path)
     else:
-        print("Unknown or unsupported file type")
+        raise ValueError("Unsupported file type")
 
-
-clean_text(extracted_text)
-
-
-
-
-
-
+    # Now send text + session_id to cleaner
+    clean_text(extracted_text, session_id)
