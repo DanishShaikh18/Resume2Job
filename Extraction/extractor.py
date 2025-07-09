@@ -1,5 +1,4 @@
 # extractor.py
-
 import fitz
 from docx import Document
 from PIL import Image

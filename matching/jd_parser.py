@@ -49,7 +49,7 @@ def extract_from_image(path):
 
     img = Image.open(path)
 
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash")
 
     response = model.generate_content([
         img,
@@ -60,7 +60,7 @@ def extract_from_image(path):
     
 
 def chunk_jd(text):
-    genai.configure(api_key="AIzaSyDGLo8r6NuHPkGFxpYHX56aGw6VKlD1ZnM")
+    genai.configure(api_key="AIzaSyA1aPF_NnR6jIsAVU2DaQEW3rGaphzhSzU")
 
     model = genai.GenerativeModel("gemini-1.5-flash")
 
