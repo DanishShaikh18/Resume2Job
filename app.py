@@ -8,6 +8,8 @@ from flask import Flask, request
 from flask_cors import CORS
 from utils import file_utils
 import google.generativeai as genai
+from extraction.extractor import extract_resume_chunks
+from matching.jd_parser import process_jd_and_embed
 
 # ========== ⚙️ Config ==========
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
@@ -59,8 +61,8 @@ def upload_files():
     resume_path = file_utils.save_uploaded_file(resume_file, session_id, 'resume')
     jd_path = file_utils.save_uploaded_file(jd_file, session_id, 'jd')
 
-    from main import accept_data
-    accept_data(resume_path, jd_path, session_id)
+    extract_resume_chunks(resume_path, session_id)
+    process_jd_and_embed(jd_path, session_id)
 
     return "Files uploaded and processed", 200
 
