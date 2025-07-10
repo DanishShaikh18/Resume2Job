@@ -1,0 +1,17 @@
+Selected Intern's Day-to-day Responsibilities Include
+
+ Data collection & cleaning:
+ Assist in sourcing, cleaning, and preprocessing data from diverse platforms to ensure accuracy and usability
+ Detect and resolve inconsistencies, missing values, and anomalies in datasets
+ Exploratory Data Analysis (EDA):
+ Perform exploratory analyses to identify key trends, patterns, and relationships within the data
+ Leverage visualizations to interpret findings and effectively communicate insights to the team
+ Model development & testing:
+ Support the end-to-end development of machine learning models, including data preparation, feature engineering, and performance evaluation
+ Gain hands-on experience with supervised and unsupervised learning techniques under mentorship
+ Data visualization & reporting:
+ Design and develop dashboards and reports to showcase analytical insights and model performance metrics
+ Utilize tools such as Python (e.g., Matplotlib, Seaborn) or Power BI to build compelling visualizations
+ Collaboration & documentation:
+ Work closely with cross-functional teams to ensure data initiatives are aligned with business objectives
+ Maintain thorough documentation of data workflows, analysis processes, and model outcomes

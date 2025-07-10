@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 import os
 import pickle
 import numpy as np
@@ -14,7 +16,7 @@ from matching.jd_parser import process_jd_and_embed
 # ========== ⚙️ Config ==========
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 EMBEDDING_DIM = 384
-GEMINI_API_KEY = "AIzaSyA1aPF_NnR6jIsAVU2DaQEW3rGaphzhSzU"
+GEMINI_API_KEY = os.getenv("APP_API_KEY")
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
 
 # Load embedding model

@@ -1,4 +1,7 @@
 import fitz
+from dotenv import load_dotenv
+load_dotenv()
+import os
 from docx import Document
 import google.generativeai as genai
 from PIL import Image
@@ -45,7 +48,7 @@ def extract_from_docx(path):
 
 #Extract text from Image
 def extract_from_image(path):
-    genai.configure(api_key="AIzaSyCt4_tCNLtp6R6d5F_NvvBZIJC31dpOJhY")
+    genai.configure(api_key=os.getenv("IMAGE_TO_TEXT_API"))
 
     img = Image.open(path)
 
@@ -60,7 +63,7 @@ def extract_from_image(path):
     
 
 def chunk_jd(text):
-    genai.configure(api_key="AIzaSyA1aPF_NnR6jIsAVU2DaQEW3rGaphzhSzU")
+    genai.configure(api_key=os.getenv("JD_CHUNK_API"))
 
     model = genai.GenerativeModel("gemini-1.5-flash")
 

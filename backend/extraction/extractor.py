@@ -1,4 +1,9 @@
 # extractor.py
+from dotenv import load_dotenv
+load_dotenv()
+import os
+from dotenv import load_dotenv
+load_dotenv()
 import fitz
 from docx import Document
 from PIL import Image
@@ -43,7 +48,7 @@ def extract_from_docx(path):
 
 # ========== 🖼️ Image Extraction ==========
 def extract_from_image(path):
-    genai.configure(api_key="AIzaSyCt4_tCNLtp6R6d5F_NvvBZIJC31dpOJhY")
+    genai.configure(api_key= os.getenv("IMAGE_TO_TEXT_API"))
 
     img = Image.open(path)
 

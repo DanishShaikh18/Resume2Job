@@ -263,7 +263,7 @@ const Resume2Job = () => {
                 <div className="max-w-3xl mx-auto p-2 sm:p-3">
                     <div className="flex justify-between items-center">
                         <div>
-                            <h1 className="text-lg font-semibold">Resume 2 Job</h1>
+                            <h1 className="text-lg font-semibold"><span className='text-cyan-500'>Resume</span> 2 Job</h1>
                         </div>
                         {resumeFile && jobDescription && (
                             <div className="flex items-center gap-2">
