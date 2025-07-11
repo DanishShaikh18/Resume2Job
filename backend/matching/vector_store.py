@@ -68,4 +68,3 @@ def embed_chunks(chunks: list, session_id: str, chunk_type: str):
 
 
     save_faiss_index(index, metadata, index_path, metadata_path)
-    print(f"✅ Stored {len(metadata)} {chunk_type} chunks for session {session_id}.")

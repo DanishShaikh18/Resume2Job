@@ -2,13 +2,10 @@
 from dotenv import load_dotenv
 load_dotenv()
 import os
-from dotenv import load_dotenv
-load_dotenv()
 import fitz
 from docx import Document
 from PIL import Image
 import magic
-import google.generativeai as genai
 from processing.cleaner import clean_text
 
 # ========== 🔍 Detect File Type ==========
@@ -48,6 +45,7 @@ def extract_from_docx(path):
 
 # ========== 🖼️ Image Extraction ==========
 def extract_from_image(path):
+    import google.generativeai as genai
     genai.configure(api_key= os.getenv("IMAGE_TO_TEXT_API"))
 
     img = Image.open(path)

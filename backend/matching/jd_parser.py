@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 from docx import Document
-import google.generativeai as genai
+
 from PIL import Image
 import magic
 import json
@@ -48,6 +48,7 @@ def extract_from_docx(path):
 
 #Extract text from Image
 def extract_from_image(path):
+    import google.generativeai as genai
     genai.configure(api_key=os.getenv("IMAGE_TO_TEXT_API"))
 
     img = Image.open(path)
@@ -63,6 +64,7 @@ def extract_from_image(path):
     
 
 def chunk_jd(text):
+    import google.generativeai as genai
     genai.configure(api_key=os.getenv("JD_CHUNK_API"))
 
     model = genai.GenerativeModel("gemini-1.5-flash")

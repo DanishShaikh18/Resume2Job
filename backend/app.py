@@ -107,6 +107,6 @@ def handle_query():
     response = call_llm(llm_prompt)
     return response, 200
 
-# ========== Start App ==========
-if __name__ == '__main__':
-    app.run(debug=True, use_reloader=False)
+# # ========== Start App ==========
+# if __name__ == '__main__':
+#     app.run(debug=True, use_reloader=False)
