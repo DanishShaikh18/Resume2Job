@@ -1,0 +1,29 @@
+# 🐍 Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# 📁 Uploaded files and vector databases
+uploads/
+vector_dbs/
+
+# 🧠 ML files
+*.pkl
+*.faiss
+
+# 📄 Sample input/output
+*.pdf
+*.docx
+*.jpg
+*.png
+
+# 🔐 Secrets and environment
+.env
+
+# 🐍 Local virtual environment
+.venv/
+venv/
+
+# 🗃️ Cached or temp data
+.cache/
+.DS_Store

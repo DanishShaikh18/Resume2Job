@@ -1,8 +1,0 @@
-We’re building a family-first healthcare
-Now we need someone who can bring simplicity, clarity, and human emotion into every screen.
-
-🎯 What we’re looking for:
- • Strong mobile-first UI/UX fundamentals
- • Ability to design full flows, not just pretty screens
- • An eye for clean, intuitive, purposeful design
- • Experience in Figma, prototyping, design systems
