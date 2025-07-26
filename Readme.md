@@ -1,5 +1,5 @@
 # Resume2Job – AI-Powered Resume & JD Matching Assistant (RAG-based)
-![License](https://img.shields.io/github/license/DanishShaikh18/Resume2Job)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Last Commit](https://img.shields.io/github/last-commit/DanishShaikh18/Resume2Job)
 ![Repo Size](https://img.shields.io/github/repo-size/DanishShaikh18/Resume2Job)
 
