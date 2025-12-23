@@ -101,6 +101,11 @@ def upload_files():
     return response, 200
 
 
+@app.route("/", methods=["GET"])
+def health():
+    return {"status": "ok", "service": "Resume2Job backend"}
+
+
 # =========================
 # Query Endpoint
 # =========================

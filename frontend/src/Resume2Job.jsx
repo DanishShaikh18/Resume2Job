@@ -51,7 +51,7 @@ const Resume2Job = () => {
             } else {
                 formData.append('jd', jdToUpload);
             }
-            fetch('http://localhost:8000/upload', {
+            fetch('https://resume2job-1.onrender.com/upload', {
                 method: 'POST',
                 body: formData,
             })
@@ -140,7 +140,7 @@ const Resume2Job = () => {
             formData.append('session_id', sessionId);
             formData.append('prompt', inputValue);
 
-            fetch('http://localhost:8000/query', {
+            fetch('https://resume2job-1.onrender.com/query', {
                 method: 'POST',
                 body: formData,
             })
