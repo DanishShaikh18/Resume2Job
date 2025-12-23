@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+backend/.env
+
+# Runtime / session data
+backend/vector_dbs/
+
+# OS files
+.DS_Store
+
+venv/
