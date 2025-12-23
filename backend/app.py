@@ -1,34 +1,32 @@
 # backend/app.py
 
-print("STEP 1")
-
 from dotenv import load_dotenv
 load_dotenv()
-print("STEP 2")
+
 
 import os
-print("STEP 3")
+
 
 from flask import Flask, request
-print("STEP 4")
+
 
 from flask_cors import CORS
-print("STEP 5")
+
 
 import google.generativeai as genai
-print("STEP 6")
+
 
 from utils import file_utils
-print("STEP 7")
+
 
 from extraction.extractor import extract_resume_chunks
-print("STEP 8")
+
 
 from matching.jd_parser import process_jd_and_embed
-print("STEP 9")
+
 
 from matching.vector_store import VECTOR_STORE
-print("STEP 10")
+
 
 
 # =========================
@@ -71,7 +69,6 @@ def call_llm(prompt: str) -> str:
         response = model.generate_content(prompt)
         return response.text.strip()
     except Exception as e:
-        print("❌ LLM Error:", e)
         return "Sorry, I couldn't generate a response at the moment."
 
 
@@ -205,7 +202,6 @@ Job Description:
 # Run App
 # =========================
 if __name__ == "__main__":
-    print("🔥 app.py is executing")
     app.run(
         host="0.0.0.0",
         port=8000,
