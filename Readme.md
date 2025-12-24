@@ -32,7 +32,7 @@ It is **not a commercial product**, but a solid **engineering + portfolio projec
 </p>
 
 <p align="center">
-  <img src=".github/screenshots/chats.png" width="700" alt="Chats List" />
+  <img src=".github/screenshots/jd_input.png" width="700" alt="Job Description Input" />
 </p>
 
 <p align="center">
@@ -40,7 +40,7 @@ It is **not a commercial product**, but a solid **engineering + portfolio projec
 </p>
 
 <p align="center">
-  <img src=".github/screenshots/jd_input.png" width="700" alt="Job Description Input" />
+  <img src=".github/screenshots/chats.png" width="700" alt="Chats List" />
 </p>
 
 ### 📱 Mobile View
