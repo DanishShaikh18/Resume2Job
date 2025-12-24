@@ -2,7 +2,7 @@
 
 Resume2Job is a **learning-focused full-stack project** that analyzes how well a resume matches a given job description.
 
-It helps users clearly understand their **strengths, gaps, and improvement areas** using structured AI-generated feedback — without vague or essay-style responses.
+It helps users clearly understand their **strengths, gaps, and improvement areas** using structured AI-generated feedback without vague or essay-style responses.
 
 This project is built to demonstrate **real-world LLM integration, document processing, and frontend–backend coordination**.  
 It is **not a commercial product**, but a solid **engineering + portfolio project**.
@@ -24,6 +24,31 @@ It is **not a commercial product**, but a solid **engineering + portfolio projec
 - Free-tier friendly (no paid APIs required)
 
 ---
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src=".github/screenshots/home.png" width="700" alt="Home Screen" />
+</p>
+
+<p align="center">
+  <img src=".github/screenshots/chats.png" width="700" alt="Chats List" />
+</p>
+
+<p align="center">
+  <img src=".github/screenshots/chat_screen.png" width="700" alt="Chat Screen" />
+</p>
+
+<p align="center">
+  <img src=".github/screenshots/jd_input.png" width="700" alt="Job Description Input" />
+</p>
+
+### 📱 Mobile View
+
+<p align="center">
+  <img src=".github/screenshots/mobile_screen.jpeg" width="320" alt="Mobile Screen" />
+</p>
+
 
 ## 🧠 How the System Works
 
